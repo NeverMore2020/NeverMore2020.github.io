@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 操作系统的一些基本概念
-date: 2021-3-01
+date: 2021-03-01
 categories: blog
 tags: [Operating System]
 description: 文章金句。
