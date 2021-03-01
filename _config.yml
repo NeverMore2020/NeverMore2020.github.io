@@ -10,7 +10,7 @@ url: "http://www.csnovice.com"  # 此处填写你的博客地址
 owner: 
   name: "NeverMore2020" # 填写作者信息：名字
   email: chengyitai@bupt.edu.cn # 填写作者信息：邮箱
-  bio: ""记录学习以及运动生活" # 填写作者信息：博客描述
+  bio: "记录学习以及运动生活" # 填写作者信息：博客描述
 
 # Data
 gavatar: img/favicon.png # 浏览器地址栏小图标，可自定义更改
