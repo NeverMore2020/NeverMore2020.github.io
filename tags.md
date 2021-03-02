@@ -18,8 +18,6 @@ header-img: "img/semantic.jpg"
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-  <a href="#{{ tag[1] }}" title="{{ tag[1] }}" rel="{{ tag[1].size }}">{{ tag[1] }}</a> 
-<!--   修改 -->
 {% endfor %}
 </div>
 
