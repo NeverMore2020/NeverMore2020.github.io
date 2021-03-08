@@ -2,7 +2,7 @@
 博主虽然也是js新手但是发现好像从教务系统页面偷偷计算一下还是挺容易的。
 
 
-```
+```javascript
 var x = document.getElementById("dataList").getElementsByTagName("tr");
 var sum = 0;
 var score = 0;
@@ -18,6 +18,15 @@ for(var i=0; i<x.length;i++){
 sum/score
 
 ```
+
+
+
+
+
+
+
+
+
 然后把上述代码输入，回车即可得到加权平均分了！
 
 
