@@ -20,17 +20,18 @@ description: 文章金句。
 - fatal: unable to access 'https://github.com//NeverMore2020/2021EBU6305G8.git/': Failed to connect to github.com port 443: Timed out <br> 解决办法:ipconfig /flushdns(windows cmd 下运行), 可能原因是使用了VPN，改变了DNS路径，这个命令清除了DNS缓存，所以一切恢复正常了。
 
 # Start from scratch: 从0创建git本地仓库
+
 0. 安装git，配置github。(此处不再赘述)
-1. 切换到你想要生成git本地仓库的目录 <br>
+1. 切换到你想要生成git本地仓库的目录 
 ```bash $ cd E:/Git/Git_documents```
-2. 这里我选择直接clone一个项目到本地 <br>
+2. 这里我选择直接clone一个项目到本地 
 ```bash 
 $ git clone git://github.com/NeverMore2020/2021EBU6305G8.git
 Cloning into '2021EBU6305G8'...
 fatal: remote error:
   Repository not found.
 ```
-什么情况。。后来发现是private 的原因，得另外加一些参数才可以。<br>
+什么情况。。后来发现是private 的原因，得另外加一些参数才可以。
 ```bash
 $ git clone https://NeverMore2020:*********@github.com//NeverMore2020/2021EBU6305G8.git 
 Cloning into '2021EBU6305G8'...
@@ -40,13 +41,14 @@ remote: Compressing objects: 100% (9/9), done.
 remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (15/15), 3.51 KiB | 4.00 KiB/s, done.
 ```
-<br> **Done!**<br>
+**Done!**<br>
 3. 切换到生成的本地项目目录下<br>
 ```bash
 $ cd 2021EBU6305G8/
 ```
+
 4. 试着创建一个新的branch<br>
-这里说一下，branch这个分支功能可能是区分git和其他VCS的杀手锏<br>
+这里说一下，branch这个分支功能可能是区分git和其他VCS的杀手锏
 ```bash
 $ git branch cyttest
 ```
@@ -63,7 +65,7 @@ $ git branch
 * cyttest
   main
 ```
-<br> \*的意思就是当前所在分支，另一个main分支是所clone的项目自带的origin分支
+ \*的意思就是当前所在分支，另一个main分支是所clone的项目自带的origin分支<br>
 7. 查看工作区中当前分支所具有的文件<br>
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
@@ -71,7 +73,7 @@ $ ls
 
 README.md
 ```
-<br>竟然自带了main分支中的内容，原来当创建新的分支的时候，系统自动把当前分支中的内容copy到了新的分支。这里多说一句，当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。通俗一点说就是说你各个branch是动态的，本地文件夹（带.git文件的)就在那里允许你多个branch来回切换更新。
+竟然自带了main分支中的内容，原来当创建新的分支的时候，系统自动把当前分支中的内容copy到了新的分支。这里多说一句，当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。通俗一点说就是说你各个branch是动态的，本地文件夹（带.git文件的)就在那里允许你多个branch来回切换更新。
 8. 给cyttest分支加一个txt文件<br>
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
