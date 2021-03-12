@@ -3,7 +3,7 @@ layout: post
 title: Git创建和使用branch
 date: 2021-03-01
 categories: blog
-tags: [如何使用命令行创建和使用branch]
+tags: [Git]
 description: 文章金句。
 ---
 # 如何使用命令行创建和使用branch
