@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 原生简单js计算gpa
-date: 2021-03-01
+date: 2021-03-08
 categories: blog
 tags: [Javascript]
 description: 文章金句。
