@@ -14,5 +14,5 @@ description: 文章金句。
 - git merge new_branch : 合并分支(注意要先切换到你想要合并成的branch下), 若报错需要加上**--allow-unrelated-histories**
 - git branch -D new_branch : 删除分支
 
-这里大家可以参考下面这篇博客的做法，写的很详细。
-<a> https://www.cnblogs.com/yanliujun-tangxianjun/p/5740704.html </a>
+这里大家可以参考下面<a href="https://www.cnblogs.com/yanliujun-tangxianjun/p/5740704.html">这篇博客</a>的做法，写的很详细。
+
