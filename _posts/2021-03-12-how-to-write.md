@@ -70,7 +70,6 @@ $ git branch
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
 $ ls
-
 README.md
 ```
 竟然自带了main分支中的内容，原来当创建新的分支的时候，系统自动把当前分支中的内容copy到了新的分支。这里多说一句，当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。通俗一点说就是说你各个branch是动态的，本地文件夹（带.git文件的)就在那里允许你多个branch来回切换更新。
