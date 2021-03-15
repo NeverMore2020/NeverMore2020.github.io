@@ -225,8 +225,7 @@ www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
 $ cat README.md
 \# EBU6305
 \## Group Number: XXXXXXXX
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
-<<<<<<< HEAD
+\<<<<<<< HEAD
 \## Project Title: 2XXXXXX
 \=======
 \## Project Title: 1XXXXXX
