@@ -175,7 +175,7 @@ Untracked files:
         test.php
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-13.合并分支到main
+13. 合并分支到main
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main)
 $ git merge cyttest
