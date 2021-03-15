@@ -106,7 +106,6 @@ README.md
 ```
 10. 试着push一下新建的cyttest分支<br>
 ```bash
-www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
 $ git push -u origin cyttest
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
