@@ -157,6 +157,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 可以看出，虽然该文件被track了，但没有在index暂存区中更新，因此使用该 **-m ** 命令无效。
+
 12. 前面提到的track是什么意思呢？<br>
 先创建一个新的test.php文件
 ```bash
