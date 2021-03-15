@@ -225,7 +225,6 @@ Automatic merge failed; fix conflicts and then commit the result.
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
 $ cat README.md
 # EBU6305
----
 ## Group Number: XXXXXXXX
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <<<<<<< HEAD
@@ -233,7 +232,6 @@ $ cat README.md
 =======
 ## Project Title: 1XXXXXX
 >>>>>>> cyttest
----
 ```
 貌似是git给我们自动加了点东西。。(上面那一串等号和>>>>>)。我们需要手动修改这些。
 ```bash
