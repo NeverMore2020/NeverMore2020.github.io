@@ -122,5 +122,142 @@ To https://github.com//NeverMore2020/2021EBU6305G8.git
  * [new branch]      cyttest -> cyttest
 Branch 'cyttest' set up to track remote branch 'cyttest' from 'origin'.
 ```
+11. 本地修改一下cyttest分支的README.md<br>
+再用git status 命令查看一下状态
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ git status
+On branch cyttest
+Your branch is up to date with 'origin/cyttest'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+**Not staged** 说明我们的文件修改了但没有提交到暂存区，这里我们直接使用** git commit -am** 命令
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ git commit -am 'README.md'
+[cyttest 1fc114d] README.md
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
+因为这个markdown文件我们之前提交到index暂存区过了(tracked)，所以直接使用这个命令即可提交新版本的markdown文件.<br>
+不信我们试试** git commit -m**
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ git commit -m 'README.md'
+On branch cyttest
+Your branch is ahead of 'origin/cyttest' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+可以看出，虽然该文件被track了，但没有在index暂存区中更新，因此使用该 **-m ** 命令无效。
+12. 前面提到的track是什么意思呢？<br>
+先创建一个新的test.php文件
+```bash
+$ touch test.php
+```
+现在这个文件是出于**untracked**状态的，如果直接commit将会报错
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ git commit -m test.php
+On branch cyttest
+Your branch is ahead of 'origin/cyttest' by 2 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.php
+nothing added to commit but untracked files present (use "git add" to track)
+```
 
+13.合并分支到main
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main)
+$ git merge cyttest
+Updating 583f837..c181b44
+Fast-forward
+ README.md | 5 +++--
+ test.php  | 0
+ test.txt  | 1 +
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+ create mode 100644 test.php
+ create mode 100644 test.txt
+```
+合并成功，但是我们这里没有遇到**冲突**的情况：两个分支的同名文件都做了不同的修改之后再merge。
+14. merge冲突问题
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ vim README.md
+//修改内容
+$ git commit -am README.md
+[cyttest 593ced4] README.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+//切换分支
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main)
+$ vim README.md
+//修改内容
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main)
+$ git commit -am 'README.md'
+[main 3053177] README.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+现在我们再来merge
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main)
+$ git merge cyttest
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+冲突出现了，我们打开文件看看发生了什么
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ cat README.md
+# EBU6305
+---
+## Group Number: XXXXXXXX
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<<<<<<< HEAD
+## Project Title: 2XXXXXX
+=======
+## Project Title: 1XXXXXX
+>>>>>>> cyttest
+---
+```
+貌似是git给我们自动加了点东西。。(上面那一串等号和>>>>>)。我们需要手动修改这些。
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ vim README.md
+```
+修改完成
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ git status -s
+UU README.md
+```
+添加到暂存区
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ git add README.md
 
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ git status -s
+M  README.md
+```
+再次提交
+```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
+$ git commit
+[main 568029c] Merge branch 'cyttest' into main
+```
+Done!
