@@ -228,9 +228,9 @@ $ cat README.md
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <<<<<<< HEAD
 \## Project Title: 2XXXXXX
-=======
+\=======
 \## Project Title: 1XXXXXX
->>>>>>> cyttest
+\>>>>>>> cyttest
 ```
 貌似是git给我们自动加了点东西。。(上面那一串等号和>>>>>)。我们需要手动修改这些。
 ```bash
