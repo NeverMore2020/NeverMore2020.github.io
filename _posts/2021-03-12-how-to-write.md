@@ -95,8 +95,8 @@ README.md  test.txt
 //更新成功
 ```
 9. 切换回main分支，发现并没有更新，这也就初步体现了branch的魅力：能够基于同一个本地文件分几条路径同时作出修改。<br>
-www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
 ```bash
+www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
 $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
