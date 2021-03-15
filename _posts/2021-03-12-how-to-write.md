@@ -189,7 +189,7 @@ Fast-forward
  create mode 100644 test.php
  create mode 100644 test.txt
 ```
-合并成功，但是我们这里没有遇到**冲突**的情况：两个分支的同名文件都做了不同的修改之后再merge。
+合并成功，但是我们这里没有遇到**冲突**的情况：两个分支的同名文件都做了不同的修改之后再merge。<br>
 14. merge冲突问题
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (cyttest)
