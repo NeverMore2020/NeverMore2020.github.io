@@ -250,7 +250,6 @@ UU README.md
 ```bash
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
 $ git add README.md
-
 www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
 $ git status -s
 M  README.md
