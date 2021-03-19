@@ -255,4 +255,8 @@ www@DESKTOP-ECGC35V MINGW64 /Git_documents/2021EBU6305G8 (main|MERGING)
 $ git commit
 [main 568029c] Merge branch 'cyttest' into main
 ```
-Done!
+Done!<br>
+15. 撤销上次的commit
+```bash
+$ git reset --soft HEAD^
+```
